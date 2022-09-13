@@ -1,1 +1,221 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap');
+
+$color-light-bg: #fff;
+$color-dark-bg: #121212;
+$color-1: rgb(96, 231, 255);
+$color-2: rgb(255, 96, 96);
+$color-3: rgb(61, 97, 242);
+$color-4: rgb(164, 90, 254);
+$color-5: rgb(115, 250, 142);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  transition: all 1s linear;
+}
+// mixins
+@mixin light-theme-404 ($color) {
+  background-color: $color-light-bg;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all .5s linear;
+  .container_404_page_content{
+    color: $color-dark-bg;
+    h3{
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: .5rem;
+    }
+    h1{
+      font-size: 10rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: $color;
+      font-family: cursive;
+    }
+    a{
+      text-decoration: none;
+      color: $color;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}
+@mixin dark-theme-404 ($color) {
+  background-color: $color-dark-bg;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all .5s linear;
+  .container_404_page_content{
+    color: $color-light-bg;
+    h3{
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: .5rem;
+    }
+    h1{
+      font-size: 10rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: $color;
+      font-family: cursive;
+    }
+    a{
+      text-decoration: none;
+      color: $color;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}
+@mixin header ($background, $color){
+  background-color: $background;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  transition: all .5s linear;
+  top: 0;
+  .options_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .theme-icon{
+      margin-right: 20px;
+      #icon-theme{
+        font-size: 1.5rem;
+        color: $color;
+        cursor: pointer;
+      }
+    }
+    .flags{
+      img{
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@mixin box-theme($background){
+  background-color: $background;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: .8;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all .3s ease;
+  &:active{
+    opacity: 1;
+  }
+}
+@mixin footer ($background, $color){
+  width: 100%;
+  background-color: $background;
+  color: $color;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  bottom: 0;
+  transition: all .5s linear;
+  p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: cursive;
+    animation: animate 2s linear infinite;
+  }
+  @keyframes animate {
+    0%,100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateX(-20px);
+    }
+  }
+  #theme-light-blue{
+    @include box-theme($color-1);
+  }
+  #theme-red{
+    @include box-theme($color-2);
+  }
+  #theme-blue{
+    @include box-theme($color-3);
+  }
+  #theme-purple{
+    @include box-theme($color-4);
+  }
+  #theme-green{
+    @include box-theme($color-5);
+  }
+}
+// Styles 404 page
+
+// light theme
+body .container_404_page.theme-light-blue{
+  @include light-theme-404($color-1);
+}
+body .container_404_page.theme-red{
+  @include light-theme-404($color-2);
+}
+body .container_404_page.theme-blue{
+  @include light-theme-404($color-3);
+}
+body .container_404_page.theme-purple{
+  @include light-theme-404($color-4);
+}
+body .container_404_page.theme-green{
+  @include light-theme-404($color-5);
+}
+body header{
+  @include header($color-light-bg, $color-dark-bg);
+}
+body footer{
+  @include footer($color-light-bg, $color-dark-bg);
+}
+// dark theme
+.dark .container_404_page.theme-light-blue{
+  @include dark-theme-404($color-1);
+}
+.dark .container_404_page.theme-red{
+  @include dark-theme-404($color-2);
+}
+.dark .container_404_page.theme-blue{
+  @include dark-theme-404($color-3);
+}
+.dark .container_404_page.theme-purple{
+  @include dark-theme-404($color-4);
+}
+.dark .container_404_page.theme-green{
+  @include dark-theme-404($color-5);
+}
+.dark header{
+  @include header($color-dark-bg, $color-light-bg);
+}
+.dark footer{
+  @include footer($color-dark-bg, $color-light-bg);
+}
+// global
+.active{
+  opacity: 1;
+}

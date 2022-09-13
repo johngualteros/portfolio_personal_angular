@@ -1,0 +1,42 @@
+<div class="container_404_page {{storedTheme}}">
+  <div class="container_404_page_content">
+    <h3>{{ "SUBTITLE_404" | translate }}</h3>
+    <h1>404</h1>
+    <p>{{ "PARAGRAPH_404" | translate }}</p>
+    <a routerLink="/">{{ "LINK_404" | translate }}</a>
+  </div>
+</div>
+<footer>
+  <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>
+  <div
+    id="theme-light-blue"
+    [ngClass]="storedTheme == 'theme-light-blue' ? 'active' : ''"
+    (click)="changeColor('theme-light-blue')"
+  ></div>
+
+  <div
+    id="theme-red"
+    [ngClass]="storedTheme == 'theme-red' ? 'active' : ''"
+    (click)="changeColor('theme-red')"
+  ></div>
+
+  <div
+    id="theme-blue"
+    [ngClass]="storedTheme == 'theme-blue' ? 'active' : ''"
+    (click)="changeColor('theme-blue')"
+  ></div>
+
+  <div
+    id="theme-purple"
+    [ngClass]="storedTheme == 'theme-purple' ? 'active' : ''"
+    (click)="changeColor('theme-purple')"
+  ></div>
+
+  <div
+    id="theme-green"
+    [ngClass]="storedTheme == 'theme-green' ? 'active' : ''"
+    (click)="changeColor('theme-green')"
+  ></div>
+
+</footer>
+
