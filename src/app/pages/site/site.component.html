@@ -1,1 +1,72 @@
-<p>site works!</p>
+<div class="container-home {{ storedTheme }}">
+  <div>
+    <h5>{{ "HOME_SUB_01" | translate }}</h5>
+    <ngx-typed-js
+      [strings]="['John Gualteros']"
+      [loop]="true"
+      [shuffle]="true"
+      [typeSpeed]="150"
+      [backDelay]="150"
+      [backSpeed]="150"
+      [showCursor]="false"
+
+    >
+      <h1 class="typing"></h1>
+    </ngx-typed-js>
+    <h3>{{ "HOME_SUB_02" | translate }}</h3>
+    <p>
+      {{ "HOME_PARAGRAPH_01" | translate }}
+    </p>
+    <p>
+      {{ "HOME_PARAGRAPH_02" | translate }}
+    </p>
+    <a href="#"
+      ><button class="btn">{{ "BUTTON_HOME" | translate }}</button></a
+    >
+    <br />
+
+    <a href="#about" class="arrow"><i class="fa-solid fa-arrow-down"></i></a>
+  </div>
+  <div class="image-container">
+    <img
+      src="../../../assets/astronauta.png"
+      alt="Astronauta"
+      width="{{ 350 }}"
+    />
+  </div>
+</div>
+
+<app-about></app-about>
+<!-- Footer -->
+<footer>
+  <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>
+  <div
+    id="theme-light-blue"
+    [ngClass]="storedTheme == 'theme-light-blue' ? 'active' : ''"
+    (click)="changeColor('theme-light-blue')"
+  ></div>
+
+  <div
+    id="theme-red"
+    [ngClass]="storedTheme == 'theme-red' ? 'active' : ''"
+    (click)="changeColor('theme-red')"
+  ></div>
+
+  <div
+    id="theme-blue"
+    [ngClass]="storedTheme == 'theme-blue' ? 'active' : ''"
+    (click)="changeColor('theme-blue')"
+  ></div>
+
+  <div
+    id="theme-purple"
+    [ngClass]="storedTheme == 'theme-purple' ? 'active' : ''"
+    (click)="changeColor('theme-purple')"
+  ></div>
+
+  <div
+    id="theme-green"
+    [ngClass]="storedTheme == 'theme-green' ? 'active' : ''"
+    (click)="changeColor('theme-green')"
+  ></div>
+</footer>

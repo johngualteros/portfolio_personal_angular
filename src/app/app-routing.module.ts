@@ -5,8 +5,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { SiteComponent } from './pages/site/site.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: SiteComponent},
+  { path: '', redirectTo: 'website', pathMatch: 'full' },
+  { path: 'website', component: SiteComponent},
   { path: '404', component: PageNotFoundComponent},
   { path: 'notfound', redirectTo: '404', pathMatch: 'full'},
   { path: '**', redirectTo: '404' }

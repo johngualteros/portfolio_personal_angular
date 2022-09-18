@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteComponent implements OnInit {
 
-  constructor() { }
+  storedTheme?: string | null = localStorage.getItem('theme-color');
 
+  constructor(){
+  }
   ngOnInit(): void {
+  }
+
+  changeColor(theme: string){
+    localStorage.setItem('theme-color', theme);
+    this.storedTheme = localStorage.getItem('theme-color');;
   }
 
 }

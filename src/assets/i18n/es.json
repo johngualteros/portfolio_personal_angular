@@ -2,5 +2,11 @@
   "SUBTITLE_404" : "404 Página no encontrada",
   "PARAGRAPH_404" : "La página que estas buscando no existe",
   "LINK_404" : "Volver a la página inicial",
-  "FOOTER" : "Intenta Esto"
+  "FOOTER" : "Intenta Esto",
+
+  "HOME_SUB_01" : "Hola Soy",
+  "HOME_SUB_02" : "Desarrollador Web Full Stack",
+  "HOME_PARAGRAPH_01" : "Soy un desarrollador web full stack con experiencia",
+  "HOME_PARAGRAPH_02" : "en el desarrollo de aplicaciones web. Me gusta trabajar en equipo y aprender cosas nuevas.",
+  "BUTTON_HOME" : "Descargar CV"
 }

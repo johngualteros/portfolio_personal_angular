@@ -1,6 +1,8 @@
 # Portfolio Personal Angular
 ![](./src/assets/portfolio_not_found_01.jpg)
 ![](./src/assets/portfolio_not_found_02.jpg)
+![](./src/assets/portoflio_01.jpg)
+![](./src/assets/portoflio_02.jpg)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server

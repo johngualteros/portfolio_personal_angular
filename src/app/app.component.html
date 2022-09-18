@@ -1,4 +1,18 @@
+<!-- Header -->
 <header>
+  <div class="networks">
+    <a href="https://github.com/johngualteros" target="_blank"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="https://es.quora.com/profile/John-Gualteros13" target="_blank"
+      ><i class="fa-brands fa-quora"></i
+    ></a>
+    <a
+      href="https://www.linkedin.com/in/john-gualteros-518bba22b/"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+  </div>
   <div class="options_header">
     <div clasS="theme-icon">
       <i
@@ -9,10 +23,33 @@
       ></i>
     </div>
     <div class="flags">
-      <img src="../assets/united_kingdom.png" (click)="changeLanguage('en')"alt="united_kingdom" width="25" />
-      <img src="../assets/spain.png" (click)="changeLanguage('es')" alt="spain" width="25" />
+      <img
+        src="../assets/united_kingdom.png"
+        (click)="changeLanguage('en')"
+        alt="united_kingdom"
+        width="25"
+      />
+      <img
+        src="../assets/spain.png"
+        (click)="changeLanguage('es')"
+        alt="spain"
+        width="25"
+      />
     </div>
   </div>
 </header>
-<router-outlet ></router-outlet>
-
+<!-- Sidebar -->
+<div class="links">
+  <a href="https://github.com/johngualteros" target="_blank"
+    ><i class="fa-brands fa-github"></i
+  ></a>
+  <a href="https://es.quora.com/profile/John-Gualteros13" target="_blank"
+    ><i class="fa-brands fa-quora"></i
+  ></a>
+  <a
+    href="https://www.linkedin.com/in/john-gualteros-518bba22b/"
+    target="_blank"
+    ><i class="fa-brands fa-linkedin"></i
+  ></a>
+</div>
+<router-outlet></router-outlet>

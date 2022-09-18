@@ -9,19 +9,22 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SiteComponent } from './pages/site/site.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AboutComponent } from './components/about/about.component';
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, SiteComponent, PageNotFoundComponent],
+  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxTypedJsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
