@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'portfolio_personal_angular';
 
   isDark: boolean = localStorage.getItem('theme') === 'dark' ? true : false;
-  storedTheme?: string | null = localStorage.getItem('theme-color');
+  storedTheme?: string | null = localStorage.getItem('theme-color') || 'theme-blue';
   language: string = localStorage.getItem('language') || 'en';
 
   constructor(public translate: TranslateService){

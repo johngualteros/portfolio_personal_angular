@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-  storedTheme?: string | null = localStorage.getItem('theme-color');
+  storedTheme?: string | null = localStorage.getItem('theme-color') || 'theme-blue';
 
 
 

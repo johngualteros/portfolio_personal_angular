@@ -8,5 +8,9 @@
   "HOME_SUB_02" : "Full Stack Web Developer",
   "HOME_PARAGRAPH_01" : "I am a full stack web developer with experience developing",
   "HOME_PARAGRAPH_02" : "web applications. I like to work in a team and learn new things.",
-  "BUTTON_HOME" : "Download CV"
+  "BUTTON_HOME" : "Download CV",
+
+  "ABOUT_TITLE": "About Me",
+  "ABOUT_PARAGRAPH": "Hi, I'm John Gualteros, I'm a full stack web developer in different languages ​​and frameworks in detail in a later section. I'm passionate about programming. I'm from Colombia. I'm self-employed and enthusiastic about learning something new every day.",
+  "ABOUT_CLICK": "click here"
 }

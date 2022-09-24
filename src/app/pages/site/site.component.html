@@ -1,8 +1,9 @@
-<div class="container-home {{ storedTheme }}">
+<div class="container-home {{ storedTheme }}" id="home">
   <div>
     <h5>{{ "HOME_SUB_01" | translate }}</h5>
+    <h1>John Gualteros</h1>
     <ngx-typed-js
-      [strings]="['John Gualteros']"
+      [strings]="['Frontend Developer', 'Backend Developer', 'Fullstack Developer']"
       [loop]="true"
       [shuffle]="true"
       [typeSpeed]="150"
@@ -11,9 +12,8 @@
       [showCursor]="false"
 
     >
-      <h1 class="typing"></h1>
+      <h3 class="typing"></h3>
     </ngx-typed-js>
-    <h3>{{ "HOME_SUB_02" | translate }}</h3>
     <p>
       {{ "HOME_PARAGRAPH_01" | translate }}
     </p>
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<app-about></app-about>
+<app-about [storedTheme]="storedTheme"></app-about>
 <!-- Footer -->
 <footer>
   <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>

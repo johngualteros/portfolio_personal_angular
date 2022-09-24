@@ -1,3 +1,19 @@
-<div class="container-about" id="about">
-  <p>about works!</p>
+<div class="container-about {{ storedTheme }}" id="about">
+  <div class="container_about_content">
+    <a href="#home" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+    <h1>{{ "ABOUT_TITLE" | translate }}</h1>
+    <p>
+      {{ "ABOUT_PARAGRAPH" | translate }}
+      <a href="#contact" id="link">{{ "ABOUT_CLICK" | translate }}</a>
+    </p>
+    <a href="#certifications" class="arrow"><i class="fa-solid fa-arrow-down"></i></a>
+  </div>
+  <div class="image-container">
+    <img
+    class="image-about"
+    width="{{ 400 }}"
+    src="https://images.vexels.com/media/users/3/152300/isolated/preview/ae0fc81df564354bb6b22d3b4fca7e85-astronauta-con-dibujos-animados-de-bandera.png"
+    alt=""
+    />
+  </div>
 </div>

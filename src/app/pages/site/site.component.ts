@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteComponent implements OnInit {
 
-  storedTheme?: string | null = localStorage.getItem('theme-color');
+  storedTheme?: string | null = localStorage.getItem('theme-color') || 'theme-blue';
 
   constructor(){
   }

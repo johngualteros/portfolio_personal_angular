@@ -257,8 +257,100 @@ $color-5: rgb(115, 250, 142);
     }
   }
 }
-// Sroll
-
+@mixin about_component($background, $color, $color-theme){
+  width: 100%;
+  height: 100vh;
+  background-color: $background;
+  color: $color;
+  padding: 0 130px;
+  display: flex;
+  align-items: center;
+  transition: all .5s linear;
+  h1{
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: $color-theme;
+    font-family: cursive;
+  }
+  h5,h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  h3{
+    margin-bottom: 20px;
+  }
+  p{
+    color: #9f9f9f;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  a{
+    text-decoration: none;
+    color: $color-theme;
+    font-weight: 700;
+  }
+  .image-container{
+    padding: 0 70px;
+    img{
+      animation: image 3s ease-in-out infinite;
+      @keyframes image {
+        0%,100%{
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(40px);
+        }
+      }
+    }
+  }
+  .arrow{
+    color: $color-theme;
+    font-size: 2rem;
+    cursor: pointer;
+    i{
+      animation: arrow 2s linear infinite;
+      @keyframes arrow {
+        0%,100%{
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+  .arrow-up{
+    color: $color-theme;
+    font-size: 2rem;
+    cursor: pointer;
+    i{
+      animation: arrow 2.3s linear infinite;
+      @keyframes arrow {
+        0%,100%{
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(-20px);
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px){
+    justify-content: center;
+    padding: 0 50px;
+    h1,h3,h5,p{
+      text-align: center;
+    }
+    h1{
+      font-size: 3rem;
+    }
+    .image-container{
+      display: none;
+    }
+  }
+}
 *{
   margin: 0;
   padding: 0;
@@ -282,6 +374,10 @@ body{
 ::-webkit-scrollbar-thumb{
   background: #cacaca;
   border-radius: 10px;
+}
+#links{
+  text-decoration: none;
+  font-weight: 900;
 }
 
 // light theme
@@ -324,6 +420,21 @@ body .container-home.theme-purple{
 body .container-home.theme-green{
   @include container-home($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-about.theme-light-blue{
+  @include about-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-about.theme-red{
+  @include about-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-about.theme-blue{
+  @include about-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-about.theme-purple{
+  @include about-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-about.theme-green{
+  @include about-component($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
 .dark .container_404_page.theme-light-blue{
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
@@ -363,6 +474,21 @@ body .container-home.theme-green{
 }
 .dark .container-home.theme-green{
   @include container-home($color-dark-bg, $color-light-bg, $color-5);
+}
+.dark .container-about.theme-light-blue{
+  @include about-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-about.theme-red{
+  @include about-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-about.theme-blue{
+  @include about-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-about.theme-purple{
+  @include about-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-about.theme-green{
+  @include about-component($color-dark-bg, $color-light-bg, $color-5);
 }
 
 // global
