@@ -3,11 +3,11 @@
 
 $color-light-bg: #fff;
 $color-dark-bg: #121212;
-$color-1: rgb(96, 231, 255);
-$color-2: rgb(255, 96, 96);
-$color-3: rgb(61, 97, 242);
-$color-4: rgb(164, 90, 254);
-$color-5: rgb(115, 250, 142);
+$color-1: rgb(227, 248, 71);
+$color-2: rgb(248, 76, 76);
+$color-3: rgb(0, 123, 255);
+$color-4: rgb(131, 29, 255);
+$color-5: rgb(74, 255, 111);
 
 // mixins
 @mixin theme-404 ($background, $color, $color-theme) {
@@ -210,22 +210,7 @@ $color-5: rgb(115, 250, 142);
     margin-bottom: 30px;
     margin-top: 10px;
   }
-  .arrow{
-    color: $color-theme;
-    font-size: 2rem;
-    cursor: pointer;
-    i{
-      animation: arrow 2s linear infinite;
-      @keyframes arrow {
-        0%,100%{
-          transform: translateY(0);
-        }
-        50%{
-          transform: translateY(20px);
-        }
-      }
-    }
-  }
+
   .image-container{
     padding: 0 100px;
     img{
@@ -351,6 +336,27 @@ $color-5: rgb(115, 250, 142);
     }
   }
 }
+@mixin studies_component($background, $color, $color-theme){
+  background-color: $background;
+  color: $color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s linear;
+  width: 100%;
+  height: 100vh;
+  h1,h2,h3,h4,h5,h6{
+    color: $color-theme;
+  }
+  h1{
+    font-size: 2.5rem;
+    color: $color;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+}
 *{
   margin: 0;
   padding: 0;
@@ -435,6 +441,21 @@ body .container-about.theme-purple{
 body .container-about.theme-green{
   @include about-component($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-studies.theme-light-blue{
+  @include studies-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-studies.theme-red{
+  @include studies-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-studies.theme-blue{
+  @include studies-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-studies.theme-purple{
+  @include studies-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-studies.theme-green{
+  @include studies-component($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
 .dark .container_404_page.theme-light-blue{
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
@@ -489,6 +510,21 @@ body .container-about.theme-green{
 }
 .dark .container-about.theme-green{
   @include about-component($color-dark-bg, $color-light-bg, $color-5);
+}
+.dark .container-studies.theme-light-blue{
+  @include studies-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-studies.theme-red{
+  @include studies-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-studies.theme-blue{
+  @include studies-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-studies.theme-purple{
+  @include studies-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-studies.theme-green{
+  @include studies-component($color-dark-bg, $color-light-bg, $color-5);
 }
 
 // global

@@ -11,13 +11,15 @@ import { SiteComponent } from './pages/site/site.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import {NgxTypedJsModule} from 'ngx-typed-js';
+import { StudiesComponent } from './components/studies/studies.component';
+import { CardStudiesComponent } from './components/card-studies/card-studies.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent],
+  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent, StudiesComponent, CardStudiesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -23,9 +23,6 @@
     <a href="#"
       ><button class="btn">{{ "BUTTON_HOME" | translate }}</button></a
     >
-    <br />
-
-    <a href="#about" class="arrow"><i class="fa-solid fa-arrow-down"></i></a>
   </div>
   <div class="image-container">
     <img
@@ -35,8 +32,10 @@
     />
   </div>
 </div>
-
+<!-- About -->
 <app-about [storedTheme]="storedTheme"></app-about>
+<!-- studies -->
+<app-studies [storedTheme]="storedTheme"></app-studies>
 <!-- Footer -->
 <footer>
   <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>
