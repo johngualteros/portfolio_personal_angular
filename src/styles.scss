@@ -256,7 +256,6 @@ $color-5: rgb(74, 255, 111);
     font-weight: 900;
     margin-bottom: 1rem;
     color: $color-theme;
-    font-family: cursive;
   }
   h5,h3{
     font-size: 1.8rem;
@@ -290,38 +289,7 @@ $color-5: rgb(74, 255, 111);
       }
     }
   }
-  .arrow{
-    color: $color-theme;
-    font-size: 2rem;
-    cursor: pointer;
-    i{
-      animation: arrow 2s linear infinite;
-      @keyframes arrow {
-        0%,100%{
-          transform: translateY(0);
-        }
-        50%{
-          transform: translateY(20px);
-        }
-      }
-    }
-  }
-  .arrow-up{
-    color: $color-theme;
-    font-size: 2rem;
-    cursor: pointer;
-    i{
-      animation: arrow 2.3s linear infinite;
-      @keyframes arrow {
-        0%,100%{
-          transform: translateY(0);
-        }
-        50%{
-          transform: translateY(-20px);
-        }
-      }
-    }
-  }
+
   @media (max-width: 1024px){
     justify-content: center;
     padding: 0 50px;
@@ -346,7 +314,9 @@ $color-5: rgb(74, 255, 111);
   justify-content: center;
   transition: all .5s linear;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 50px 0;
   h1,h2,h3,h4,h5,h6{
     color: $color-theme;
   }
@@ -355,6 +325,110 @@ $color-5: rgb(74, 255, 111);
     color: $color;
     font-weight: 900;
     margin-bottom: 20px;
+  }
+  .container-cards{
+    width: 80%;
+    transition: all .5s linear;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+    place-items: center;
+    .card{
+      width: 100%;
+      max-width: 300px;
+      min-width: 300px;
+      background-color: $background;
+      border: 1px solid $color-theme;
+      padding: 20px;
+      transition: all .5s linear;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      .flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        a{
+          background-color: transparent;
+          border: 1px solid $color-theme;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+          color: $color-theme;
+          font-weight: 500;
+          text-decoration: none;
+          transition: all .5s linear;
+          &:hover{
+            background-color: $color-theme;
+            color: $background;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin details-certification-component($background, $color, $color-theme){
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 7% 0;
+  background-color: $background;
+  color: $color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s linear;
+  h1{
+    font-size: 2rem;
+    color: $color;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color: $color-theme;
+  }
+  img{
+    width: 60%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .container-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+    height: 50px;
+    a{
+      background-color: transparent;
+      border: 1px solid $color-theme;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      color: $color-theme;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all .5s linear;
+      &:hover{
+        background-color: $color-theme;
+        color: $background;
+      }
+    }
+  }
+  @media (max-width: 768px){
+    padding: 10% 0;
+    h1{
+      font-size: 1.5rem;
+      margin-top: 40px;
+    }
+    img{
+      width: 100%;
+      min-height: 500px;
+    }
   }
 }
 *{
@@ -370,6 +444,9 @@ body{
   background-color: #f5f5f5;
   transition: all 1s linear;
   overflow: overlay;
+}
+h1,h2,h3,h4,h5,h6,a{
+  transition: all .5s linear;
 }
 ::-webkit-scrollbar{
   width: 10px;
@@ -456,6 +533,21 @@ body .container-studies.theme-purple{
 body .container-studies.theme-green{
   @include studies-component($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-details-certification.theme-light-blue{
+  @include details-certification-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-details-certification.theme-red{
+  @include details-certification-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-details-certification.theme-blue{
+  @include details-certification-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-details-certification.theme-purple{
+  @include details-certification-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-details-certification.theme-green{
+  @include details-certification-component($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
 .dark .container_404_page.theme-light-blue{
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
@@ -525,6 +617,21 @@ body .container-studies.theme-green{
 }
 .dark .container-studies.theme-green{
   @include studies-component($color-dark-bg, $color-light-bg, $color-5);
+}
+.dark .container-details-certification.theme-light-blue{
+  @include details-certification-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-details-certification.theme-red{
+  @include details-certification-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-details-certification.theme-blue{
+  @include details-certification-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-details-certification.theme-purple{
+  @include details-certification-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-details-certification.theme-green{
+  @include details-certification-component($color-dark-bg, $color-light-bg, $color-5);
 }
 
 // global

@@ -13,5 +13,9 @@
   "ABOUT_TITLE": "About Me",
   "ABOUT_PARAGRAPH": "Hi, I'm John Gualteros, I'm a full stack web developer in different languages ​​and frameworks in detail in a later section. I'm passionate about programming. I'm from Colombia. I'm self-employed and enthusiastic about learning something new every day.",
   "ABOUT_CLICK": "click here",
-  "STUDIES_TITLE": "Studies and Certifications"
+  "STUDIES_TITLE": "Studies and Certifications",
+
+  "DETAILS_A_1": "Go Back",
+  "DETAILS_A_2": "Download",
+  "BUTTON_DETAILS": "See"
 }

@@ -1,0 +1,42 @@
+<div class="container-details-certification {{ storedTheme }}" *ngFor="let study of studies">
+  <div class="container-actions">
+    <a routerLink="/">{{ "DETAILS_A_1" | translate }}</a>
+    <a [href]="study.link" download>{{ "DETAILS_A_2" | translate }}</a>
+  </div>
+  <h1>{{ study.title }}</h1>
+  <img [src]="study.image" alt="titulo" >
+</div>
+<!-- Footer -->
+<footer>
+  <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>
+  <div
+    id="theme-light-blue"
+    [ngClass]="storedTheme == 'theme-light-blue' ? 'active' : ''"
+    (click)="changeColor('theme-light-blue')"
+  ></div>
+
+  <div
+    id="theme-red"
+    [ngClass]="storedTheme == 'theme-red' ? 'active' : ''"
+    (click)="changeColor('theme-red')"
+  ></div>
+
+  <div
+    id="theme-blue"
+    [ngClass]="storedTheme == 'theme-blue' ? 'active' : ''"
+    (click)="changeColor('theme-blue')"
+  ></div>
+
+  <div
+    id="theme-purple"
+    [ngClass]="storedTheme == 'theme-purple' ? 'active' : ''"
+    (click)="changeColor('theme-purple')"
+  ></div>
+
+  <div
+    id="theme-green"
+    [ngClass]="storedTheme == 'theme-green' ? 'active' : ''"
+    (click)="changeColor('theme-green')"
+  ></div>
+
+</footer>

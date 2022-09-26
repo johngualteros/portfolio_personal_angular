@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Studies } from 'src/app/interfaces/studies';
+import { StudiesService } from 'src/app/services/studies.service';
 
 @Component({
   selector: 'app-studies',
@@ -8,29 +9,14 @@ import { Studies } from 'src/app/interfaces/studies';
 })
 export class StudiesComponent implements OnInit {
   @Input() storedTheme: any;
+  studies: Studies[];
+  constructor(private studiesService: StudiesService) {}
 
-  studies: Studies[] = [
-    {
-      id: 1,
-      title: 'Técnico en Programación de software',
-      image: '../assets/astronauta.png',
-      link: '../assets/astronauta.png',
-    },
-    {
-      id: 1,
-      title: 'Técnico en Programación de software',
-      image: '../assets/astronauta.png',
-      link: '../assets/astronauta.png',
-    },
-    {
-      id: 1,
-      title: 'Técnico en Programación de software',
-      image: '../assets/astronauta.png',
-      link: '../assets/astronauta.png',
-    },
-  ];
+  ngOnInit(): void {
+    this.studies = this.studiesService.getStudies();
+  }
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  getStudies() {
+    return this.studiesService.getStudies();
+  }
 }
