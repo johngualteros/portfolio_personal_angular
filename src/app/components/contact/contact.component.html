@@ -1,0 +1,78 @@
+<div class="container-contact {{ storedTheme }}" id="contact">
+  <!-- Spinner -->
+  <div class="loader" *ngIf="loading">
+    <div class="loader__spinner"></div>
+  </div>
+  <h1>{{ "TITLE_CONTACT" | translate }}</h1>
+  <form #contactForm="ngForm">
+    <div>
+      <label for="name">{{ "LABEL_01" | translate }}</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="{{ 'PLACEHOLDER_01' | translate }}"
+        [(ngModel)]="contact.name"
+        required
+        minlength="3"
+        #name="ngModel"
+      />
+      <!-- Validate -->
+      <span *ngIf="name.invalid && (name.dirty || name.touched)">
+        <p *ngIf="name.errors?.['required']">
+          {{ "ERROR_01_NAME" | translate }}
+        </p>
+        <p *ngIf="name.errors?.['minlength']">
+          {{ "ERROR_02_NAME" | translate }}
+        </p>
+      </span>
+    </div>
+    <div>
+      <label for="email">{{ "LABEL_02" | translate }}</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="{{ 'PLACEHOLDER_02' | translate }}"
+        [(ngModel)]="contact.email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        required
+        #email="ngModel"
+      />
+      <span *ngIf="email.invalid && (email.dirty || email.touched)">
+        <p *ngIf="email.errors?.['required']">
+          {{ "ERROR_01_EMAIL" | translate }}
+        </p>
+        <p *ngIf="email.errors?.['pattern']">
+          {{ "ERROR_02_EMAIL" | translate }}
+        </p>
+      </span>
+    </div>
+    <div>
+      <label for="message">{{ "LABEL_03" | translate }}</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="5"
+        placeholder="{{ 'PLACEHOLDER_03' | translate }}"
+        [(ngModel)]="contact.message"
+        name="message"
+        required
+        minlength="10"
+        #message="ngModel"
+      ></textarea>
+      <span *ngIf="message.invalid && (message.dirty || message.touched)">
+        <p *ngIf="message.errors?.['required']">
+          {{ "ERROR_01_MESSAGE" | translate }}
+        </p>
+        <p *ngIf="message.errors?.['minlength']">
+          {{ "ERROR_02_MESSAGE" | translate }}
+        </p>
+      </span>
+    </div>
+    <button (click)="sendEmail()" [disabled]="contactForm.invalid" [class]="contactForm.invalid ? 'disabled' : ''">
+      {{ "BUTTON_CONTACT" | translate }}
+    </button>
+
+  </form>
+</div>

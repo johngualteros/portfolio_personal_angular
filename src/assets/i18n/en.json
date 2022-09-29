@@ -24,5 +24,22 @@
   "SUBTITLE_SKILLS_02": "My Skills",
   "PARAGRAPH_SKILLS_01": "these are some of the languages ​​/ frameworks / libraries that I know and continue to learn more and more every day These are not all that I know as I mentioned before I am self-taught and I like to learn new things if you like to contact me for more details of technologies that I know or that I am learning you can do it through me",
   "PARAGRAPH_SKILLS_02": "or through this link",
-  "LINK_SKILLS": "Contact"
+  "LINK_SKILLS": "Contact",
+
+  "TITLE_CONTACT": "Get in touch",
+  "LABEL_01": "Name",
+  "PLACEHOLDER_01": "Please enter your name",
+  "LABEL_02": "Email",
+  "PLACEHOLDER_02": "Please enter your email",
+  "LABEL_03": "Message",
+  "PLACEHOLDER_03": "Please enter the message",
+  "BUTTON_CONTACT": "Send message",
+
+  "ERROR_01_NAME": "The name field is required",
+  "ERROR_02_NAME": "The name field must have at least 3 characters",
+  "ERROR_01_EMAIL": "The email field is required",
+  "ERROR_02_EMAIL": "The email field is not valid example@gmail.com",
+  "ERROR_01_MESSAGE": "The message field is required",
+  "ERROR_02_MESSAGE": "The message field must have at least 10 characters",
+  "SUCCESS": "Your message has been send successfully"
 }

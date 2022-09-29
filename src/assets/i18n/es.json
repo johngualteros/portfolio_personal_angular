@@ -24,5 +24,23 @@
   "SUBTITLE_SKILLS_02": "Mis habilidades",
   "PARAGRAPH_SKILLS_01": "estos son algunos de los lenguages / frameworks / librerias que conozco y sigo aprendiendo más y más cada día estos no son todos los que conozco como mencione antes soy autodidacta y me gusta aprender cosas nuevas si gustas ponerte en contacto conmigo para más detalles de tecnologías que conozco o que estoy aprendiendo puedes hacerlo a través de mi",
   "PARAGRAPH_SKILLS_02": "o a traves de este link",
-  "LINK_SKILLS": "Contactar"
+  "LINK_SKILLS": "Contactar",
+
+  "TITLE_CONTACT": "Ponerse en contacto",
+  "LABEL_01": "Nombre",
+  "PLACEHOLDER_01": "Porfavor digite su nombre",
+  "LABEL_02": "Correo",
+  "PLACEHOLDER_02": "Porfavor digite su correo",
+  "LABEL_03": "Mensaje",
+  "PLACEHOLDER_03": "Porfavor digite su mensaje",
+  "BUTTON_CONTACT": "Enviar el mensaje",
+
+  
+  "ERROR_01_NAME": "El campo nombre es obligatorio",
+  "ERROR_02_NAME": "El campo nombre debe tener al menos 3 caracteres",
+  "ERROR_01_EMAIL": "El campo correo es obligatorio",
+  "ERROR_02_EMAIL": "El campo correo no es valido ejemplo@gmail.com",
+  "ERROR_01_MESSAGE": "El campo mensaje es obligatorio",
+  "ERROR_02_MESSAGE": "El campo mensaje debe tener al menos 10 caracteres",
+  "SUCCESS": "Mensaje enviado con exito"
 }

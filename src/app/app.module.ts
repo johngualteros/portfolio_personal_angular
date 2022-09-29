@@ -15,13 +15,14 @@ import { StudiesComponent } from './components/studies/studies.component';
 import { CardStudiesComponent } from './components/card-studies/card-studies.component';
 import { CertificationDetailComponent } from './components/certification-detail/certification-detail.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent, StudiesComponent, CardStudiesComponent, CertificationDetailComponent, SkillsComponent],
+  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent, StudiesComponent, CardStudiesComponent, CertificationDetailComponent, SkillsComponent, ContactComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

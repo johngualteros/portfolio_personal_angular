@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap');
 
-$color-light-bg: #fff;
-$color-dark-bg: #121212;
+$color-light-bg: rgb(246, 246, 246);
+$color-dark-bg: #131313;
 $color-1: rgb(227, 248, 71);
 $color-2: rgb(248, 76, 76);
 $color-3: rgb(0, 123, 255);
 $color-4: rgb(131, 29, 255);
-$color-5: rgb(74, 255, 111);
+$color-5: rgb(104, 245, 132);
 
 // mixins
 @mixin theme-404 ($background, $color, $color-theme) {
@@ -477,7 +477,7 @@ $color-5: rgb(74, 255, 111);
   .container-sections-skills{
     display: grid;
     padding: 50px 0;
-    grid-template-columns: auto 50%;
+    // grid-template-columns: auto 50%;
     place-content: center;
     place-items: center;
     width: 80%;
@@ -539,6 +539,115 @@ $color-5: rgb(74, 255, 111);
   @media (max-width: 400px){
     h1{
       font-size: 2rem;
+    }
+  }
+}
+@mixin contact-component($background, $color, $color-theme){
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: $background;
+  color: $color;
+  transition: all .5s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,.5);
+    .loader__spinner{
+      width: 100px;
+      height: 100px;
+      border: 10px solid #f3f3f3;
+      border-top: 10px solid $color-theme;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      @keyframes spin{
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+  h1{
+    font-size: 2.8rem;
+    color: $color;
+    font-weight: 900;
+    text-align: center;
+  }
+  h2,h3,h4,h5,h6{
+    color: $color-theme;
+  }
+  form{
+    width: 40%;
+    label{
+      color: $color;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 10px 0;
+      display: block;
+    }
+    input, textarea{
+      width: 100%;
+      border: 1px solid $color-theme;
+      border-radius: 5px;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: $color;
+      background-color: transparent;
+      transition: all .5s linear;
+      outline: none;
+      &:focus{
+        box-shadow: 0px 0px 2px 3px $color-theme;
+      }
+    }
+    button{
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: $color;
+      font-weight: bold;
+      background-color: $color-theme;
+      transition: all .5s linear;
+      cursor: pointer;
+      outline: none;
+      margin: 10px 0 30px 0;
+    }
+    p{
+      color: $color-theme;
+      font-size: 1rem;
+      transition: all .5s linear;
+    }
+  }
+  @media (max-width: 900px){
+    form{
+      width: 60%;
+    }
+  }
+  @media (max-width: 768px){
+    form{
+      width: 80%;
+    }
+    .alert-container{
+      .alert-message{
+        width: 80%;
+      }
     }
   }
 }
@@ -674,6 +783,21 @@ body .container-skills.theme-purple{
 body .container-skills.theme-green{
   @include skills-component($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-contact.theme-light-blue{
+  @include contact-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-contact.theme-red{
+  @include contact-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-contact.theme-blue{
+  @include contact-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-contact.theme-purple{
+  @include contact-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-contact.theme-green{
+  @include contact-component($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
 .dark .container_404_page.theme-light-blue{
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
@@ -774,9 +898,28 @@ body .container-skills.theme-green{
 .dark .container-skills.theme-green{
   @include skills-component($color-dark-bg, $color-light-bg, $color-5);
 }
+.dark .container-contact.theme-light-blue{
+  @include contact-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-contact.theme-red{
+  @include contact-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-contact.theme-blue{
+  @include contact-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-contact.theme-purple{
+  @include contact-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-contact.theme-green{
+  @include contact-component($color-dark-bg, $color-light-bg, $color-5);
+}
 
 // global
 .active{
   opacity: 1;
 }
 
+.disabled{
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
