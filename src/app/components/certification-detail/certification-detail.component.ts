@@ -19,7 +19,6 @@ export class CertificationDetailComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.studies = this.getStudyById(this.id);
-    console.log(this.studies);
   }
 
   getStudyById(id: number){

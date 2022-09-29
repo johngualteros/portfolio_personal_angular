@@ -17,5 +17,12 @@
 
   "DETAILS_A_1": "Go Back",
   "DETAILS_A_2": "Download",
-  "BUTTON_DETAILS": "See"
+  "BUTTON_DETAILS": "See",
+
+  "TITLE_SKILLS": "Knowledge",
+  "SUBTITLE_SKILLS_01": "More about me",
+  "SUBTITLE_SKILLS_02": "My Skills",
+  "PARAGRAPH_SKILLS_01": "these are some of the languages ​​/ frameworks / libraries that I know and continue to learn more and more every day These are not all that I know as I mentioned before I am self-taught and I like to learn new things if you like to contact me for more details of technologies that I know or that I am learning you can do it through me",
+  "PARAGRAPH_SKILLS_02": "or through this link",
+  "LINK_SKILLS": "Contact"
 }

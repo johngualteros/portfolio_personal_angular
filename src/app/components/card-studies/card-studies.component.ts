@@ -12,7 +12,6 @@ export class CardStudiesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.study);
   }
 
 }

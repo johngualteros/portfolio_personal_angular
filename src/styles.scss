@@ -166,7 +166,7 @@ $color-5: rgb(74, 255, 111);
     margin: 20px 0;
     font-size: 1.8rem;
   }
-  @media (max-width: 841px){
+  @media (max-width: 900px){
     display:none
   }
 }
@@ -241,6 +241,9 @@ $color-5: rgb(74, 255, 111);
       width: 100%;
     }
   }
+  @media (max-width: 841px){
+    padding: 0;
+  }
 }
 @mixin about_component($background, $color, $color-theme){
   width: 100%;
@@ -268,7 +271,9 @@ $color-5: rgb(74, 255, 111);
   p{
     color: #9f9f9f;
     font-size: 1.2rem;
+    margin: 0 auto;
     margin-bottom: 40px;
+    width: 85%;
   }
   a{
     text-decoration: none;
@@ -302,6 +307,9 @@ $color-5: rgb(74, 255, 111);
     .image-container{
       display: none;
     }
+  }
+  @media (max-width: 841px){
+    padding: 0 20px;
   }
 }
 @mixin studies_component($background, $color, $color-theme){
@@ -367,6 +375,11 @@ $color-5: rgb(74, 255, 111);
       }
     }
   }
+  @media (max-width: 400px){
+    h1{
+      font-size: 2rem;
+    }
+  }
 }
 @mixin details-certification-component($background, $color, $color-theme){
   width: 100%;
@@ -428,6 +441,104 @@ $color-5: rgb(74, 255, 111);
     img{
       width: 100%;
       min-height: 500px;
+    }
+  }
+}
+@mixin skills-component($background, $color, $color-theme){
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: $background;
+  color: $color;
+  transition: all .5s linear;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  h1{
+    font-size: 2.8rem;
+    color: $color;
+    font-weight: 900;
+    text-align: center;
+  }
+  h2,h3,h4,h5,h6{
+    color: $color-theme;
+  }
+  h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p{
+    color: #9f9f9f;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+  .container-sections-skills{
+    display: grid;
+    padding: 50px 0;
+    grid-template-columns: auto 50%;
+    place-content: center;
+    place-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 50px;
+    .container-skill-section{
+      width: 100%;
+      height: 100%;
+      h3{
+        text-align: center;
+      }
+      a{
+        text-decoration: none;
+        color: $color-theme;
+        font-weight: 400;
+      }
+      .container-languages{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        place-content: center;
+        place-items: center;
+        gap: 10px;
+        img{
+          width: 40px;
+          height: 40px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-weight: bold;
+          color: $color;
+        }
+        .container-language{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+        }
+      }
+    }
+  }
+  @media (max-width: 900px){
+    .container-sections-skills{
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      p{
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+  @media (max-width: 400px){
+    h1{
+      font-size: 2rem;
     }
   }
 }
@@ -548,6 +659,21 @@ body .container-details-certification.theme-purple{
 body .container-details-certification.theme-green{
   @include details-certification-component($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-skills.theme-light-blue{
+  @include skills-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-skills.theme-red{
+  @include skills-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-skills.theme-blue{
+  @include skills-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-skills.theme-purple{
+  @include skills-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-skills.theme-green{
+  @include skills-component($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
 .dark .container_404_page.theme-light-blue{
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
@@ -633,8 +759,24 @@ body .container-details-certification.theme-green{
 .dark .container-details-certification.theme-green{
   @include details-certification-component($color-dark-bg, $color-light-bg, $color-5);
 }
+.dark .container-skills.theme-light-blue{
+  @include skills-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-skills.theme-red{
+  @include skills-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-skills.theme-blue{
+  @include skills-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-skills.theme-purple{
+  @include skills-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-skills.theme-green{
+  @include skills-component($color-dark-bg, $color-light-bg, $color-5);
+}
 
 // global
 .active{
   opacity: 1;
 }
+

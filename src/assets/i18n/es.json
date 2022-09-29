@@ -17,5 +17,12 @@
 
   "DETAILS_A_1": "Volver Atrás",
   "DETAILS_A_2": "Descargar",
-  "BUTTON_DETAILS": "Ver"
+  "BUTTON_DETAILS": "Ver",
+
+  "TITLE_SKILLS": "Conocimientos",
+  "SUBTITLE_SKILLS_01": "Más sobre mí",
+  "SUBTITLE_SKILLS_02": "Mis habilidades",
+  "PARAGRAPH_SKILLS_01": "estos son algunos de los lenguages / frameworks / librerias que conozco y sigo aprendiendo más y más cada día estos no son todos los que conozco como mencione antes soy autodidacta y me gusta aprender cosas nuevas si gustas ponerte en contacto conmigo para más detalles de tecnologías que conozco o que estoy aprendiendo puedes hacerlo a través de mi",
+  "PARAGRAPH_SKILLS_02": "o a traves de este link",
+  "LINK_SKILLS": "Contactar"
 }

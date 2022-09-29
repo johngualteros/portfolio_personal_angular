@@ -1,0 +1,30 @@
+<div class="container-skills {{ storedTheme }}">
+  <h1>{{ "TITLE_SKILLS" | translate }}</h1>
+  <div class="container-sections-skills">
+    <div class="container-skill-section">
+      <h3>{{ "SUBTITLE_SKILLS_01" | translate }}</h3>
+      <p>
+        {{ "PARAGRAPH_SKILLS_01" | translate }}
+        <a
+          href="https://www.linkedin.com/in/john-gualteros-518bba22b/"
+          target="_blank"
+          >Linkedin</a
+        >
+        {{ "PARAGRAPH_SKILLS_02" | translate }}
+        <span>&rarr; </span>
+        <a href="#contact">{{ "LINK_SKILLS" | translate }}</a>
+      </p>
+    </div>
+    <div class="container-skill-section">
+      <h3>{{ "SUBTITLE_SKILLS_02" | translate }}</h3>
+      <div class="container-languages">
+
+        <div class="container-language" *ngFor="let skill of skills">
+          <img [src]="skill.image" [alt]="skill.title" />
+          <p>{{ skill.title }}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
