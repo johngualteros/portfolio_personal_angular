@@ -3,8 +3,22 @@
   <div class="loader" *ngIf="loading">
     <div class="loader__spinner"></div>
   </div>
+  <!-- Send -->
+  <div class="alert-container" *ngIf="isSend">
+    <div class="alert">
+      <div class="alert__icon">
+        <i class="fas fa-check"></i>
+      </div>
+      <div class="alert__text">
+        <h2>{{ "MESSAGE_ALERT_TITLE" | translate }}</h2>
+        <p>
+          {{ "MESSAGE_ALERT_TEXT" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
   <h1>{{ "TITLE_CONTACT" | translate }}</h1>
-  <form #contactForm="ngForm">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div>
       <label for="name">{{ "LABEL_01" | translate }}</label>
       <input
@@ -70,9 +84,12 @@
         </p>
       </span>
     </div>
-    <button (click)="sendEmail()" [disabled]="contactForm.invalid" [class]="contactForm.invalid ? 'disabled' : ''">
+    <button
+      type="submit"
+      [disabled]="contactForm.invalid"
+      [class]="contactForm.invalid ? 'disabled' : ''"
+    >
       {{ "BUTTON_CONTACT" | translate }}
     </button>
-
   </form>
 </div>

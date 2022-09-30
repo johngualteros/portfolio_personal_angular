@@ -1,0 +1,44 @@
+<div class="container-project-details {{ storedTheme }}" *ngFor="let project of projects">
+  <a routerLink="/">{{ "DETAILS_A_1" | translate }}</a>
+  <h1>{{ project.name }}</h1>
+  <p>{{ project.description }}</p>
+  <div class="list-languages">
+    <p *ngFor="let language of project.technologies">{{ language }}</p>
+  </div>
+  <img [src]="project.image" alt="">
+  <a [href]="project.github">Github</a>
+</div>
+<!-- Footer -->
+<footer>
+  <p>{{ "FOOTER" | translate }} <span>&rarr;</span></p>
+  <div
+    id="theme-light-blue"
+    [ngClass]="storedTheme == 'theme-light-blue' ? 'active' : ''"
+    (click)="changeColor('theme-light-blue')"
+  ></div>
+
+  <div
+    id="theme-red"
+    [ngClass]="storedTheme == 'theme-red' ? 'active' : ''"
+    (click)="changeColor('theme-red')"
+  ></div>
+
+  <div
+    id="theme-blue"
+    [ngClass]="storedTheme == 'theme-blue' ? 'active' : ''"
+    (click)="changeColor('theme-blue')"
+  ></div>
+
+  <div
+    id="theme-purple"
+    [ngClass]="storedTheme == 'theme-purple' ? 'active' : ''"
+    (click)="changeColor('theme-purple')"
+  ></div>
+
+  <div
+    id="theme-green"
+    [ngClass]="storedTheme == 'theme-green' ? 'active' : ''"
+    (click)="changeColor('theme-green')"
+  ></div>
+
+</footer>

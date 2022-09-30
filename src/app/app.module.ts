@@ -16,13 +16,16 @@ import { CardStudiesComponent } from './components/card-studies/card-studies.com
 import { CertificationDetailComponent } from './components/certification-detail/certification-detail.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent, StudiesComponent, CardStudiesComponent, CertificationDetailComponent, SkillsComponent, ContactComponent],
+  declarations: [AppComponent, SiteComponent, PageNotFoundComponent, AboutComponent, StudiesComponent, CardStudiesComponent, CertificationDetailComponent, SkillsComponent, ContactComponent, ProjectsComponent, CardProjectComponent, ProjectDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

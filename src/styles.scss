@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap");
 
 $color-light-bg: rgb(246, 246, 246);
 $color-dark-bg: #131313;
-$color-1: rgb(227, 248, 71);
+$color-1: rgb(248, 192, 71);
 $color-2: rgb(248, 76, 76);
 $color-3: rgb(0, 123, 255);
-$color-4: rgb(131, 29, 255);
+$color-4: rgb(183, 29, 255);
 $color-5: rgb(104, 245, 132);
 
 // mixins
-@mixin theme-404 ($background, $color, $color-theme) {
+@mixin theme-404($background, $color, $color-theme) {
   background-color: $background;
   width: 100%;
   height: 100vh;
@@ -19,22 +19,22 @@ $color-5: rgb(104, 245, 132);
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transition: all .5s linear;
-  .container_404_page_content{
+  transition: all 0.5s linear;
+  .container_404_page_content {
     color: $color;
-    h3{
+    h3 {
       font-size: 2rem;
       font-weight: 500;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
-    h1{
+    h1 {
       font-size: 10rem;
       font-weight: 700;
       margin-bottom: 1rem;
       color: $color-theme;
       font-family: cursive;
     }
-    a{
+    a {
       text-decoration: none;
       color: $color-theme;
       font-weight: bold;
@@ -43,7 +43,7 @@ $color-5: rgb(104, 245, 132);
   }
 }
 
-@mixin header ($background, $color){
+@mixin header($background, $color) {
   background-color: $background;
   width: 100%;
   height: 60px;
@@ -52,61 +52,61 @@ $color-5: rgb(104, 245, 132);
   align-items: center;
   padding: 0 20px;
   position: fixed;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   top: 0;
   z-index: 3;
-  .networks{
+  .networks {
     display: none;
-    a{
+    a {
       text-decoration: none;
       color: $color;
       margin: 0 10px;
       font-size: 1.8rem;
     }
   }
-  .options_header{
+  .options_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .theme-icon{
+    .theme-icon {
       margin-right: 20px;
-      #icon-theme{
+      #icon-theme {
         font-size: 1.5rem;
         color: $color;
         cursor: pointer;
       }
     }
-    .flags{
-      img{
+    .flags {
+      img {
         margin: 0 10px;
         cursor: pointer;
       }
     }
   }
-  @media (max-width: 841px){
+  @media (max-width: 841px) {
     justify-content: space-between;
-    .networks{
+    .networks {
       display: block;
-      a{
+      a {
         font-size: 1.5rem;
       }
     }
   }
 }
-@mixin box-theme($background){
+@mixin box-theme($background) {
   background-color: $background;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  opacity: .8;
+  opacity: 0.8;
   margin: 0 10px;
   cursor: pointer;
-  transition: all .3s ease;
-  &:active{
+  transition: all 0.3s ease;
+  &:active {
     opacity: 1;
   }
 }
-@mixin footer ($background, $color){
+@mixin footer($background, $color) {
   width: 100%;
   background-color: $background;
   color: $color;
@@ -117,38 +117,39 @@ $color-5: rgb(104, 245, 132);
   padding: 0 20px;
   position: fixed;
   bottom: 0;
-  transition: all .5s linear;
-  p{
+  transition: all 0.5s linear;
+  p {
     font-size: 1.2rem;
     font-weight: 500;
     font-family: cursive;
     animation: animate 2s linear infinite;
   }
   @keyframes animate {
-    0%,100%{
+    0%,
+    100% {
       transform: translateY(0);
     }
-    50%{
+    50% {
       transform: translateX(-20px);
     }
   }
-  #theme-light-blue{
+  #theme-light-blue {
     @include box-theme($color-1);
   }
-  #theme-red{
+  #theme-red {
     @include box-theme($color-2);
   }
-  #theme-blue{
+  #theme-blue {
     @include box-theme($color-3);
   }
-  #theme-purple{
+  #theme-purple {
     @include box-theme($color-4);
   }
-  #theme-green{
+  #theme-green {
     @include box-theme($color-5);
   }
 }
-@mixin sidebar($background, $color){
+@mixin sidebar($background, $color) {
   background-color: $background;
   width: 80px;
   display: flex;
@@ -159,18 +160,18 @@ $color-5: rgb(104, 245, 132);
   height: 100vh;
   left: 0;
   z-index: 2;
-  transition: all .5s linear;
-  a{
+  transition: all 0.5s linear;
+  a {
     text-decoration: none;
     color: $color;
     margin: 20px 0;
     font-size: 1.8rem;
   }
-  @media (max-width: 900px){
-    display:none
+  @media (max-width: 900px) {
+    display: none;
   }
 }
-@mixin container-home($background, $color, $color-theme){
+@mixin container-home($background, $color, $color-theme) {
   width: 100%;
   height: 100vh;
   background-color: $background;
@@ -178,27 +179,28 @@ $color-5: rgb(104, 245, 132);
   padding: 0 130px;
   display: flex;
   align-items: center;
-  transition: all .5s linear;
-  h1{
+  transition: all 0.5s linear;
+  h1 {
     font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 1rem;
     color: $color-theme;
     font-family: cursive;
   }
-  h5,h3{
+  h5,
+  h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
-  h3{
+  h3 {
     margin-bottom: 20px;
   }
-  p{
+  p {
     color: #9f9f9f;
     font-size: 1.2rem;
   }
-  .btn{
+  .btn {
     text-decoration: none;
     background-color: $color-theme;
     font-weight: bold;
@@ -211,41 +213,45 @@ $color-5: rgb(104, 245, 132);
     margin-top: 10px;
   }
 
-  .image-container{
+  .image-container {
     padding: 0 100px;
-    img{
+    img {
       animation: image 3s ease-in-out infinite;
       @keyframes image {
-        0%,100%{
+        0%,
+        100% {
           transform: translateY(0);
         }
-        50%{
+        50% {
           transform: translateY(40px);
         }
       }
     }
   }
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     justify-content: center;
     padding: 0 50px;
-    h1,h3,h5,p{
+    h1,
+    h3,
+    h5,
+    p {
       text-align: center;
     }
-    h1{
+    h1 {
       font-size: 3rem;
     }
-    .image-container{
+    .image-container {
       display: none;
     }
-    .btn{
+    .btn {
       width: 100%;
     }
   }
-  @media (max-width: 841px){
+  @media (max-width: 841px) {
     padding: 0;
   }
 }
-@mixin about_component($background, $color, $color-theme){
+@mixin about_component($background, $color, $color-theme) {
   width: 100%;
   height: 100vh;
   background-color: $background;
@@ -253,66 +259,71 @@ $color-5: rgb(104, 245, 132);
   padding: 0 130px;
   display: flex;
   align-items: center;
-  transition: all .5s linear;
-  h1{
+  transition: all 0.5s linear;
+  h1 {
     font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 1rem;
     color: $color-theme;
   }
-  h5,h3{
+  h5,
+  h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
-  h3{
+  h3 {
     margin-bottom: 20px;
   }
-  p{
+  p {
     color: #9f9f9f;
     font-size: 1.2rem;
     margin: 0 auto;
     margin-bottom: 40px;
-    width: 85%;
+    width: 100%;
   }
-  a{
+  a {
     text-decoration: none;
     color: $color-theme;
     font-weight: 700;
   }
-  .image-container{
+  .image-container {
     padding: 0 70px;
-    img{
+    img {
       animation: image 3s ease-in-out infinite;
       @keyframes image {
-        0%,100%{
+        0%,
+        100% {
           transform: translateY(0);
         }
-        50%{
+        50% {
           transform: translateY(40px);
         }
       }
     }
   }
 
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     justify-content: center;
     padding: 0 50px;
-    h1,h3,h5,p{
+    h1,
+    h3,
+    h5,
+    p {
       text-align: center;
     }
-    h1{
+    h1 {
       font-size: 3rem;
     }
-    .image-container{
+    .image-container {
       display: none;
     }
   }
-  @media (max-width: 841px){
+  @media (max-width: 841px) {
     padding: 0 20px;
   }
 }
-@mixin studies_component($background, $color, $color-theme){
+@mixin studies_component($background, $color, $color-theme) {
   background-color: $background;
   color: $color;
   text-align: center;
@@ -320,43 +331,48 @@ $color-5: rgb(104, 245, 132);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   width: 100%;
   height: auto;
   min-height: 100vh;
   padding: 50px 0;
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $color-theme;
   }
-  h1{
+  h1 {
     font-size: 2.5rem;
     color: $color;
     font-weight: 900;
     margin-bottom: 20px;
   }
-  .container-cards{
+  .container-cards {
     width: 80%;
-    transition: all .5s linear;
+    transition: all 0.5s linear;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-content: center;
     place-items: center;
-    .card{
+    .card {
       width: 100%;
       max-width: 300px;
       min-width: 300px;
       background-color: $background;
       border: 1px solid $color-theme;
       padding: 20px;
-      transition: all .5s linear;
+      transition: all 0.5s linear;
       border-radius: 10px;
       margin-bottom: 20px;
-      .flex{
+      .flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
-        a{
+        a {
           background-color: transparent;
           border: 1px solid $color-theme;
           padding: 5px 10px;
@@ -366,8 +382,8 @@ $color-5: rgb(104, 245, 132);
           color: $color-theme;
           font-weight: 500;
           text-decoration: none;
-          transition: all .5s linear;
-          &:hover{
+          transition: all 0.5s linear;
+          &:hover {
             background-color: $color-theme;
             color: $background;
           }
@@ -375,13 +391,13 @@ $color-5: rgb(104, 245, 132);
       }
     }
   }
-  @media (max-width: 400px){
-    h1{
+  @media (max-width: 400px) {
+    h1 {
       font-size: 2rem;
     }
   }
 }
-@mixin details-certification-component($background, $color, $color-theme){
+@mixin details-certification-component($background, $color, $color-theme) {
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -393,29 +409,34 @@ $color-5: rgb(104, 245, 132);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all .5s linear;
-  h1{
+  transition: all 0.5s linear;
+  h1 {
     font-size: 2rem;
     color: $color;
     font-weight: 900;
     margin-bottom: 20px;
   }
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $color-theme;
   }
-  img{
+  img {
     width: 60%;
     height: 100%;
     margin-bottom: 20px;
   }
-  .container-actions{
+  .container-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     margin-top: 20px;
     height: 50px;
-    a{
+    a {
       background-color: transparent;
       border: 1px solid $color-theme;
       padding: 5px 10px;
@@ -425,56 +446,60 @@ $color-5: rgb(104, 245, 132);
       color: $color-theme;
       font-weight: 500;
       text-decoration: none;
-      transition: all .5s linear;
-      &:hover{
+      transition: all 0.5s linear;
+      &:hover {
         background-color: $color-theme;
         color: $background;
       }
     }
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding: 10% 0;
-    h1{
+    h1 {
       font-size: 1.5rem;
       margin-top: 40px;
     }
-    img{
+    img {
       width: 100%;
       min-height: 500px;
     }
   }
 }
-@mixin skills-component($background, $color, $color-theme){
+@mixin skills-component($background, $color, $color-theme) {
   width: 100%;
   height: auto;
   min-height: 100vh;
   background-color: $background;
   color: $color;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   display: grid;
   place-content: center;
   place-items: center;
-  h1{
+  h1 {
     font-size: 2.8rem;
     color: $color;
     font-weight: 900;
     text-align: center;
   }
-  h2,h3,h4,h5,h6{
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $color-theme;
   }
-  h3{
+  h3 {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 20px;
   }
-  p{
+  p {
     color: #9f9f9f;
     font-size: 1.2rem;
     margin-bottom: 40px;
     text-align: justify;
   }
-  .container-sections-skills{
+  .container-sections-skills {
     display: grid;
     padding: 50px 0;
     // grid-template-columns: auto 50%;
@@ -483,18 +508,18 @@ $color-5: rgb(104, 245, 132);
     width: 80%;
     margin: 0 auto;
     gap: 50px;
-    .container-skill-section{
+    .container-skill-section {
       width: 100%;
       height: 100%;
-      h3{
+      h3 {
         text-align: center;
       }
-      a{
+      a {
         text-decoration: none;
         color: $color-theme;
         font-weight: 400;
       }
-      .container-languages{
+      .container-languages {
         width: 100%;
         height: auto;
         display: grid;
@@ -502,58 +527,57 @@ $color-5: rgb(104, 245, 132);
         place-content: center;
         place-items: center;
         gap: 10px;
-        img{
+        img {
           width: 40px;
           height: 40px;
           margin-bottom: 10px;
         }
-        p{
+        p {
           font-weight: bold;
           color: $color;
         }
-        .container-language{
+        .container-language {
           width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-
         }
       }
     }
   }
-  @media (max-width: 900px){
-    .container-sections-skills{
+  @media (max-width: 900px) {
+    .container-sections-skills {
       grid-template-columns: 1fr;
       gap: 20px;
       width: 100%;
       padding: 30px;
       text-align: center;
-      p{
+      p {
         text-align: center;
         font-size: 1rem;
       }
     }
   }
-  @media (max-width: 400px){
-    h1{
+  @media (max-width: 400px) {
+    h1 {
       font-size: 2rem;
     }
   }
 }
-@mixin contact-component($background, $color, $color-theme){
+@mixin contact-component($background, $color, $color-theme) {
   width: 100%;
   height: auto;
   min-height: 100vh;
   background-color: $background;
   color: $color;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .loader{
+  .alert-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -563,43 +587,78 @@ $color-5: rgb(104, 245, 132);
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: rgba(0,0,0,.5);
-    .loader__spinner{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear;
+    .alert {
+      width: 40%;
+      background-color: $background;
+      color: $color;
+      padding: 20px;
+      border-radius: 5px;
+      transition: all 0.5s linear;
+      text-align: center;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .alert__icon {
+        font-size: 3rem;
+      }
+    }
+  }
+  .loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    .loader__spinner {
       width: 100px;
       height: 100px;
       border: 10px solid #f3f3f3;
       border-top: 10px solid $color-theme;
       border-radius: 50%;
       animation: spin 1s linear infinite;
-      @keyframes spin{
-        0%{
+      @keyframes spin {
+        0% {
           transform: rotate(0deg);
         }
-        100%{
+        100% {
           transform: rotate(360deg);
         }
       }
     }
   }
-  h1{
+  h1 {
     font-size: 2.8rem;
     color: $color;
     font-weight: 900;
     text-align: center;
   }
-  h2,h3,h4,h5,h6{
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $color-theme;
   }
-  form{
+  form {
     width: 40%;
-    label{
+    label {
       color: $color;
       font-size: 1.2rem;
       font-weight: 500;
       margin: 10px 0;
       display: block;
     }
-    input, textarea{
+    input,
+    textarea {
       width: 100%;
       border: 1px solid $color-theme;
       border-radius: 5px;
@@ -608,13 +667,13 @@ $color-5: rgb(104, 245, 132);
       font-size: 1rem;
       color: $color;
       background-color: transparent;
-      transition: all .5s linear;
+      transition: all 0.5s linear;
       outline: none;
-      &:focus{
+      &:focus {
         box-shadow: 0px 0px 2px 3px $color-theme;
       }
     }
-    button{
+    button {
       width: 100%;
       border: none;
       border-radius: 5px;
@@ -624,302 +683,580 @@ $color-5: rgb(104, 245, 132);
       color: $color;
       font-weight: bold;
       background-color: $color-theme;
-      transition: all .5s linear;
+      transition: all 0.5s linear;
       cursor: pointer;
       outline: none;
       margin: 10px 0 30px 0;
     }
-    p{
+    p {
       color: $color-theme;
       font-size: 1rem;
-      transition: all .5s linear;
+      transition: all 0.5s linear;
     }
   }
-  @media (max-width: 900px){
-    form{
+  @media (max-width: 900px) {
+    form {
       width: 60%;
     }
   }
-  @media (max-width: 768px){
-    form{
+  @media (max-width: 768px) {
+    form {
       width: 80%;
     }
-    .alert-container{
-      .alert-message{
+    .alert-container {
+      .alert {
         width: 80%;
       }
     }
   }
 }
-*{
+@mixin projects-component($background, $color, $color-theme) {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: $background;
+  color: $color;
+  transition: all 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  h1 {
+    font-size: 2.8rem;
+    color: $color;
+    font-weight: 900;
+    text-align: center;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-theme;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  p {
+    width: 60%;
+  }
+  .container-projects-cards {
+    width: 85%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+    padding: 20px;
+    .card-project {
+      border: 2px solid $color-theme;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: all 0.5s linear;
+      height: 100%;
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-theme;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .container-buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+        button {
+          border: none;
+          border-radius: 5px;
+          padding: 8px 10px;
+          font-size: 1rem;
+          color: $color;
+          font-weight: bold;
+          background-color: $color-theme;
+          transition: all 0.5s linear;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+      p {
+        width: 100% !important;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    p {
+      width: 80%;
+    }
+  }
+}
+@mixin project-details($background, $color, $color-theme) {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 7% 0;
+  background-color: $background;
+  color: $color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s linear;
+  h1 {
+    font-size: 2rem;
+    color: $color;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-theme;
+  }
+  img {
+    width: 60%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  p {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  a {
+    color: $color;
+    background-color: $color-theme;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .list-languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+    width: 60%;
+    p {
+      font-size: 1.2rem;
+      transition: all 0.5s linear;
+      font-weight: 700;
+      color: $color-theme;
+    }
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 80%;
+    }
+    p {
+      width: 80%;
+    }
+    .list-languages {
+      width: 80%;
+    }
+    a {
+      margin: 40px 0;
+    }
+  }
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   background-color: #f5f5f5;
   transition: all 1s linear;
   overflow: overlay;
 }
-h1,h2,h3,h4,h5,h6,a{
-  transition: all .5s linear;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  transition: all 0.5s linear;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: transparent;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #cacaca;
   border-radius: 10px;
 }
-#links{
+#links {
   text-decoration: none;
   font-weight: 900;
 }
 
 // light theme
-body .container_404_page.theme-light-blue{
+body .container_404_page.theme-light-blue {
   @include theme-404($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container_404_page.theme-red{
-  @include theme-404($color-light-bg, $color-dark-bg,$color-2);
+body .container_404_page.theme-red {
+  @include theme-404($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container_404_page.theme-blue{
-  @include theme-404($color-light-bg, $color-dark-bg,$color-3);
+body .container_404_page.theme-blue {
+  @include theme-404($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container_404_page.theme-purple{
-  @include theme-404($color-light-bg, $color-dark-bg,$color-4);
+body .container_404_page.theme-purple {
+  @include theme-404($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container_404_page.theme-green{
-  @include theme-404($color-light-bg, $color-dark-bg,$color-5);
+body .container_404_page.theme-green {
+  @include theme-404($color-light-bg, $color-dark-bg, $color-5);
 }
-body header{
+body header {
   @include header($color-light-bg, $color-dark-bg);
 }
-body footer{
+body footer {
   @include footer($color-light-bg, $color-dark-bg);
 }
-body .links{
+body .links {
   @include sidebar($color-light-bg, $color-dark-bg);
 }
-body .container-home.theme-light-blue{
+body .container-home.theme-light-blue {
   @include container-home($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container-home.theme-red{
+body .container-home.theme-red {
   @include container-home($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container-home.theme-blue{
+body .container-home.theme-blue {
   @include container-home($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container-home.theme-purple{
+body .container-home.theme-purple {
   @include container-home($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container-home.theme-green{
+body .container-home.theme-green {
   @include container-home($color-light-bg, $color-dark-bg, $color-5);
 }
-body .container-about.theme-light-blue{
+body .container-about.theme-light-blue {
   @include about-component($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container-about.theme-red{
+body .container-about.theme-red {
   @include about-component($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container-about.theme-blue{
+body .container-about.theme-blue {
   @include about-component($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container-about.theme-purple{
+body .container-about.theme-purple {
   @include about-component($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container-about.theme-green{
+body .container-about.theme-green {
   @include about-component($color-light-bg, $color-dark-bg, $color-5);
 }
-body .container-studies.theme-light-blue{
+body .container-studies.theme-light-blue {
   @include studies-component($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container-studies.theme-red{
+body .container-studies.theme-red {
   @include studies-component($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container-studies.theme-blue{
+body .container-studies.theme-blue {
   @include studies-component($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container-studies.theme-purple{
+body .container-studies.theme-purple {
   @include studies-component($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container-studies.theme-green{
+body .container-studies.theme-green {
   @include studies-component($color-light-bg, $color-dark-bg, $color-5);
 }
-body .container-details-certification.theme-light-blue{
-  @include details-certification-component($color-light-bg, $color-dark-bg, $color-1);
+body .container-details-certification.theme-light-blue {
+  @include details-certification-component(
+    $color-light-bg,
+    $color-dark-bg,
+    $color-1
+  );
 }
-body .container-details-certification.theme-red{
-  @include details-certification-component($color-light-bg, $color-dark-bg, $color-2);
+body .container-details-certification.theme-red {
+  @include details-certification-component(
+    $color-light-bg,
+    $color-dark-bg,
+    $color-2
+  );
 }
-body .container-details-certification.theme-blue{
-  @include details-certification-component($color-light-bg, $color-dark-bg, $color-3);
+body .container-details-certification.theme-blue {
+  @include details-certification-component(
+    $color-light-bg,
+    $color-dark-bg,
+    $color-3
+  );
 }
-body .container-details-certification.theme-purple{
-  @include details-certification-component($color-light-bg, $color-dark-bg, $color-4);
+body .container-details-certification.theme-purple {
+  @include details-certification-component(
+    $color-light-bg,
+    $color-dark-bg,
+    $color-4
+  );
 }
-body .container-details-certification.theme-green{
-  @include details-certification-component($color-light-bg, $color-dark-bg, $color-5);
+body .container-details-certification.theme-green {
+  @include details-certification-component(
+    $color-light-bg,
+    $color-dark-bg,
+    $color-5
+  );
 }
-body .container-skills.theme-light-blue{
+body .container-skills.theme-light-blue {
   @include skills-component($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container-skills.theme-red{
+body .container-skills.theme-red {
   @include skills-component($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container-skills.theme-blue{
+body .container-skills.theme-blue {
   @include skills-component($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container-skills.theme-purple{
+body .container-skills.theme-purple {
   @include skills-component($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container-skills.theme-green{
+body .container-skills.theme-green {
   @include skills-component($color-light-bg, $color-dark-bg, $color-5);
 }
-body .container-contact.theme-light-blue{
+body .container-contact.theme-light-blue {
   @include contact-component($color-light-bg, $color-dark-bg, $color-1);
 }
-body .container-contact.theme-red{
+body .container-contact.theme-red {
   @include contact-component($color-light-bg, $color-dark-bg, $color-2);
 }
-body .container-contact.theme-blue{
+body .container-contact.theme-blue {
   @include contact-component($color-light-bg, $color-dark-bg, $color-3);
 }
-body .container-contact.theme-purple{
+body .container-contact.theme-purple {
   @include contact-component($color-light-bg, $color-dark-bg, $color-4);
 }
-body .container-contact.theme-green{
+body .container-contact.theme-green {
   @include contact-component($color-light-bg, $color-dark-bg, $color-5);
 }
+body .container-projects.theme-light-blue {
+  @include projects-component($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-projects.theme-red {
+  @include projects-component($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-projects.theme-blue {
+  @include projects-component($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-projects.theme-purple {
+  @include projects-component($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-projects.theme-green {
+  @include projects-component($color-light-bg, $color-dark-bg, $color-5);
+}
+body .container-project-details.theme-light-blue {
+  @include project-details($color-light-bg, $color-dark-bg, $color-1);
+}
+body .container-project-details.theme-red {
+  @include project-details($color-light-bg, $color-dark-bg, $color-2);
+}
+body .container-project-details.theme-blue {
+  @include project-details($color-light-bg, $color-dark-bg, $color-3);
+}
+body .container-project-details.theme-purple {
+  @include project-details($color-light-bg, $color-dark-bg, $color-4);
+}
+body .container-project-details.theme-green {
+  @include project-details($color-light-bg, $color-dark-bg, $color-5);
+}
 // dark theme
-.dark .container_404_page.theme-light-blue{
+.dark .container_404_page.theme-light-blue {
   @include theme-404($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container_404_page.theme-red{
-  @include theme-404($color-dark-bg, $color-light-bg,$color-2);
+.dark .container_404_page.theme-red {
+  @include theme-404($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container_404_page.theme-blue{
-  @include theme-404($color-dark-bg, $color-light-bg,$color-3);
+.dark .container_404_page.theme-blue {
+  @include theme-404($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container_404_page.theme-purple{
-  @include theme-404($color-dark-bg, $color-light-bg,$color-4);
+.dark .container_404_page.theme-purple {
+  @include theme-404($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container_404_page.theme-green{
-  @include theme-404($color-dark-bg, $color-light-bg,$color-5);
+.dark .container_404_page.theme-green {
+  @include theme-404($color-dark-bg, $color-light-bg, $color-5);
 }
-.dark header{
+.dark header {
   @include header($color-dark-bg, $color-light-bg);
 }
-.dark footer{
+.dark footer {
   @include footer($color-dark-bg, $color-light-bg);
 }
-.dark .links{
+.dark .links {
   @include sidebar($color-dark-bg, $color-light-bg);
 }
-.dark .container-home.theme-light-blue{
+.dark .container-home.theme-light-blue {
   @include container-home($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container-home.theme-red{
+.dark .container-home.theme-red {
   @include container-home($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container-home.theme-blue{
+.dark .container-home.theme-blue {
   @include container-home($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container-home.theme-purple{
+.dark .container-home.theme-purple {
   @include container-home($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container-home.theme-green{
+.dark .container-home.theme-green {
   @include container-home($color-dark-bg, $color-light-bg, $color-5);
 }
-.dark .container-about.theme-light-blue{
+.dark .container-about.theme-light-blue {
   @include about-component($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container-about.theme-red{
+.dark .container-about.theme-red {
   @include about-component($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container-about.theme-blue{
+.dark .container-about.theme-blue {
   @include about-component($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container-about.theme-purple{
+.dark .container-about.theme-purple {
   @include about-component($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container-about.theme-green{
+.dark .container-about.theme-green {
   @include about-component($color-dark-bg, $color-light-bg, $color-5);
 }
-.dark .container-studies.theme-light-blue{
+.dark .container-studies.theme-light-blue {
   @include studies-component($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container-studies.theme-red{
+.dark .container-studies.theme-red {
   @include studies-component($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container-studies.theme-blue{
+.dark .container-studies.theme-blue {
   @include studies-component($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container-studies.theme-purple{
+.dark .container-studies.theme-purple {
   @include studies-component($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container-studies.theme-green{
+.dark .container-studies.theme-green {
   @include studies-component($color-dark-bg, $color-light-bg, $color-5);
 }
-.dark .container-details-certification.theme-light-blue{
-  @include details-certification-component($color-dark-bg, $color-light-bg, $color-1);
+.dark .container-details-certification.theme-light-blue {
+  @include details-certification-component(
+    $color-dark-bg,
+    $color-light-bg,
+    $color-1
+  );
 }
-.dark .container-details-certification.theme-red{
-  @include details-certification-component($color-dark-bg, $color-light-bg, $color-2);
+.dark .container-details-certification.theme-red {
+  @include details-certification-component(
+    $color-dark-bg,
+    $color-light-bg,
+    $color-2
+  );
 }
-.dark .container-details-certification.theme-blue{
-  @include details-certification-component($color-dark-bg, $color-light-bg, $color-3);
+.dark .container-details-certification.theme-blue {
+  @include details-certification-component(
+    $color-dark-bg,
+    $color-light-bg,
+    $color-3
+  );
 }
-.dark .container-details-certification.theme-purple{
-  @include details-certification-component($color-dark-bg, $color-light-bg, $color-4);
+.dark .container-details-certification.theme-purple {
+  @include details-certification-component(
+    $color-dark-bg,
+    $color-light-bg,
+    $color-4
+  );
 }
-.dark .container-details-certification.theme-green{
-  @include details-certification-component($color-dark-bg, $color-light-bg, $color-5);
+.dark .container-details-certification.theme-green {
+  @include details-certification-component(
+    $color-dark-bg,
+    $color-light-bg,
+    $color-5
+  );
 }
-.dark .container-skills.theme-light-blue{
+.dark .container-skills.theme-light-blue {
   @include skills-component($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container-skills.theme-red{
+.dark .container-skills.theme-red {
   @include skills-component($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container-skills.theme-blue{
+.dark .container-skills.theme-blue {
   @include skills-component($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container-skills.theme-purple{
+.dark .container-skills.theme-purple {
   @include skills-component($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container-skills.theme-green{
+.dark .container-skills.theme-green {
   @include skills-component($color-dark-bg, $color-light-bg, $color-5);
 }
-.dark .container-contact.theme-light-blue{
+.dark .container-contact.theme-light-blue {
   @include contact-component($color-dark-bg, $color-light-bg, $color-1);
 }
-.dark .container-contact.theme-red{
+.dark .container-contact.theme-red {
   @include contact-component($color-dark-bg, $color-light-bg, $color-2);
 }
-.dark .container-contact.theme-blue{
+.dark .container-contact.theme-blue {
   @include contact-component($color-dark-bg, $color-light-bg, $color-3);
 }
-.dark .container-contact.theme-purple{
+.dark .container-contact.theme-purple {
   @include contact-component($color-dark-bg, $color-light-bg, $color-4);
 }
-.dark .container-contact.theme-green{
+.dark .container-contact.theme-green {
   @include contact-component($color-dark-bg, $color-light-bg, $color-5);
+}
+.dark .container-projects.theme-light-blue {
+  @include projects-component($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-projects.theme-red {
+  @include projects-component($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-projects.theme-blue {
+  @include projects-component($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-projects.theme-purple {
+  @include projects-component($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-projects.theme-green {
+  @include projects-component($color-dark-bg, $color-light-bg, $color-5);
+}
+.dark .container-project-details.theme-light-blue {
+  @include project-details($color-dark-bg, $color-light-bg, $color-1);
+}
+.dark .container-project-details.theme-red {
+  @include project-details($color-dark-bg, $color-light-bg, $color-2);
+}
+.dark .container-project-details.theme-blue {
+  @include project-details($color-dark-bg, $color-light-bg, $color-3);
+}
+.dark .container-project-details.theme-purple {
+  @include project-details($color-dark-bg, $color-light-bg, $color-4);
+}
+.dark .container-project-details.theme-green {
+  @include project-details($color-dark-bg, $color-light-bg, $color-5);
 }
 
 // global
-.active{
+.active {
   opacity: 1;
 }
 
-.disabled{
+.disabled {
   opacity: 0.5;
   cursor: not-allowed !important;
 }

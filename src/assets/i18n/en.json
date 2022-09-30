@@ -41,5 +41,15 @@
   "ERROR_02_EMAIL": "The email field is not valid example@gmail.com",
   "ERROR_01_MESSAGE": "The message field is required",
   "ERROR_02_MESSAGE": "The message field must have at least 10 characters",
-  "SUCCESS": "Your message has been send successfully"
+  "SUCCESS": "Your message has been send successfully",
+
+  "TITLE_ PROJECTS": "Projects And Goals",
+  "SUBTITLE_01_PROJECTS": "Projects",
+  "PROJECTS_PARAGRAPH_01": "These are some of the projects that I have done if you want to see more you can see them on my github, all these projects are for learning purposes. In my github you can see from my first projects to the most recent",
+  "SUBTITLE_02_PROJECTS": "Goals",
+  "PROJECTS_PARAGRAPH_02": "My dream is to work in one of the big software development companies, that is my biggest goal, my continuous motivation. In addition to continuing to learn every day. I already fulfilled one of my goals, I participated in a regional tournament in Colombia, said tournament is called senasoft, I participated in the category of integral development with technologies such as springboot, hibernate, angular, bootstrap, etc.",
+  "BUTTON_PROJECTS": "View more in Github",
+
+  "MESSAGE_ALERT_TITLE": "Message sent!",
+  "MESSAGE_ALERT_TEXT": "Thank you for your message. I will get back to you as soon as possible."
 }

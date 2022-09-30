@@ -1,0 +1,14 @@
+<div class="container-projects {{ storedTheme }}">
+  <h1>{{ "TITLE_ PROJECTS" | translate }}</h1>
+  <h3>{{ "SUBTITLE_01_PROJECTS" | translate }}</h3>
+  <p>
+    {{ "PROJECTS_PARAGRAPH_01" | translate }}
+  </p>
+  <h3>{{ "SUBTITLE_02_PROJECTS" | translate }}</h3>
+  <p>
+    {{ "PROJECTS_PARAGRAPH_02" | translate }}
+  </p>
+  <div class="container-projects-cards">
+    <app-card-project *ngFor="let project of projects" [project]="project"></app-card-project>
+  </div>
+</div>

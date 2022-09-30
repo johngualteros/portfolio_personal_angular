@@ -35,12 +35,23 @@
   "PLACEHOLDER_03": "Porfavor digite su mensaje",
   "BUTTON_CONTACT": "Enviar el mensaje",
 
-  
+
   "ERROR_01_NAME": "El campo nombre es obligatorio",
   "ERROR_02_NAME": "El campo nombre debe tener al menos 3 caracteres",
   "ERROR_01_EMAIL": "El campo correo es obligatorio",
   "ERROR_02_EMAIL": "El campo correo no es valido ejemplo@gmail.com",
   "ERROR_01_MESSAGE": "El campo mensaje es obligatorio",
   "ERROR_02_MESSAGE": "El campo mensaje debe tener al menos 10 caracteres",
-  "SUCCESS": "Mensaje enviado con exito"
+  "SUCCESS": "Mensaje enviado con exito",
+
+  "TITLE_ PROJECTS": "Proyectos y Metas",
+  "SUBTITLE_01_PROJECTS": "Proyectos",
+  "PROJECTS_PARAGRAPH_01": "Estos son algunos de los proyectos que he realizado si gustas ver más puedes verlos en mi github, todos estos proyectos son con fines de aprendizaje. En mi github podrán ver desde mis primeros proyectos hasta los más recientes",
+  "SUBTITLE_02_PROJECTS": "Metas",
+  "PROJECTS_PARAGRAPH_02": "Mi sueño es trabajar en una de las grandes empresas del desarrollo de software esa es mi mayor meta mi motivación continua. además del seguir aprendiendo todos los dias. Cumplí ya una de mis metas participe en un torneo regional en colombia dicho torneo se llama senasoft participe en la categoria de desarrollo integral con tecnologías como springboot, hibernate, angular, bootstrap etc.",
+  "BUTTON_PROJECTS": "Ver más en Github",
+
+  "MESSAGE_ALERT_TITLE": "Mensaje Enviado",
+  "MESSAGE_ALERT_TEXT": "Gracias por tu mensaje. Me pondré en contacto contigo lo antes posible.."
+
 }
